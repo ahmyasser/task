@@ -21,7 +21,7 @@ async function bootstrap() {
       max: 100, // limit each IP to 100 requests per windowMs
     }),
   );
-
+  app.enableCors();
   await app.listen(3000);
   const logger = new Logger('Bootstrap');
   logger.log(`Starting application on port: ${3000}`);
